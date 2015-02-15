@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25e5733c-d2a8-4cfc-a006-bc937b4e646c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RAproject.iws" />
@@ -405,7 +404,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424029345237</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add role field to users table and migrate users and passwords">
+      <created>1424029873833</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1424029873833</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -454,7 +459,8 @@
     <MESSAGE value="Add bootstrap 3.3.2 css stylesheet" />
     <MESSAGE value="Add master page blade template and fill device views with page names" />
     <MESSAGE value="Change database and .env file with database name, user, password(.env right!!!)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change database and .env file with database name, user, password(.env right!!!)" />
+    <MESSAGE value="Add role field to users table and migrate users and passwords" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add role field to users table and migrate users and passwords" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
