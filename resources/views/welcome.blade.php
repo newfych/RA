@@ -42,5 +42,7 @@
 				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
 		</div>
-	</body>
+        <img src="../resources/img/Default.png" class="img-thumbnail img-responsive">
+
+    </body>
 </html>
