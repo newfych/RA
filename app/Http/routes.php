@@ -17,6 +17,12 @@ Route::get('home', 'HomeController@index');
 
 Route::resource('devices', 'DevicesController');
 
+Route::resource('images', 'ImagesController');
+
+Route::resource('sensors', 'SensorsController');
+
+Route::resource('actuators', 'ActuatorsController');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
