@@ -1,9 +1,12 @@
 <?php namespace App\Http\Controllers;
 
+use App\Device;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Redirect;
+use Request;
 
 class DevicesController extends Controller {
 
@@ -22,7 +25,15 @@ class DevicesController extends Controller {
 
 	public function store()
 	{
-        return view('devices/store');
+        $input = Request::all();
+        $img = $input['imageName'];
+        if ($img == ''){
+            $input['imageName'] = 'Default.png';
+        }
+
+        Device::create($input);
+//
+        return new RedirectResponse(url('/devices'));
 	}
 
 
