@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25e5733c-d2a8-4cfc-a006-bc937b4e646c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Device.php" afterPath="$PROJECT_DIR$/app/Device.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/DevicesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DevicesController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/devices/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/devices/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,20 +28,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/devices/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="1158">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.6410614" vertical-offset="0" max-vertical-offset="1158">
+              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DevicesController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DevicesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DevicesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78351957" vertical-offset="34" max-vertical-offset="1770">
+            <state vertical-scroll-proportion="-18.961538" vertical-offset="102" max-vertical-offset="1770">
               <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
               <folding>
                 <element signature="e#39#54#0#PHP" expanded="true" />
@@ -94,8 +92,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2015_02_15_195816_create_sensors_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_15_195855_create_actuators_table.php" />
         <option value="$PROJECT_DIR$/app/Device.php" />
-        <option value="$PROJECT_DIR$/resources/views/devices/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DevicesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/devices/create.blade.php" />
       </list>
     </option>
   </component>
@@ -444,7 +442,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424030773275</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add form to create new device and create method in the DevicesController">
+      <created>1424036185786</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1424036185786</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -496,7 +500,8 @@
     <MESSAGE value="Add role field to users table and migrate users and passwords" />
     <MESSAGE value="Add initial migrations for devices, images, sensors, actuators tables" />
     <MESSAGE value="Add name and imageName fields  for devices, images, sensors, actuators tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add name and imageName fields  for devices, images, sensors, actuators tables" />
+    <MESSAGE value="Add form to create new device and create method in the DevicesController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add form to create new device and create method in the DevicesController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -657,14 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/devices/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="1158">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.038462" vertical-offset="204" max-vertical-offset="1413">
@@ -675,11 +672,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DevicesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78351957" vertical-offset="34" max-vertical-offset="1770">
+        <state vertical-scroll-proportion="-18.961538" vertical-offset="102" max-vertical-offset="1770">
           <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
           <folding>
             <element signature="e#39#54#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/devices/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6410614" vertical-offset="0" max-vertical-offset="1158">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
