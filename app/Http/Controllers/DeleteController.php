@@ -8,11 +8,16 @@ use Illuminate\Http\Request;
 
 class DeleteController extends Controller {
 
-	public function device($id){
-
-        $device = Device::findOrFail($id);
-        return view ('delete/device', compact('device'));
-
+	public function device($id)
+    {   $device = null;
+        $device = Device::find($id);
+        if ($device == null) {
+            echo '5';
+            return redirect('devices');
+        }
+        elseif ($device != null){
+                return view('delete/device', compact('device'));
+        }
     }
 
 }

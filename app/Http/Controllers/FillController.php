@@ -11,12 +11,6 @@ use Illuminate\Support\Facades\Schema;
 class FillController extends Controller {
 
 
-	public function sensors()
-	{
-		$sensors = SensorType::all();
-        dd($sensors);
-	}
-
     public function stypes()
     {
         $sensorTypes = ['Temperature',
@@ -31,21 +25,23 @@ class FillController extends Controller {
                         'Gas',
                         'Other'];
         foreach ($sensorTypes as $sensorType){
+
+            SensorType::create(['name'=>$sensorType]);
 //
-            Artisan::call('make:model', ['name'=>$sensorType]);
-
-            $controllerName = ($sensorType.'Controller');
-            Artisan::call('make:controller', ['name'=>$controllerName]);
-
-            Schema::dropIfExists($sensorType);
-            $tableName=(strtolower($sensorType).'s');
-            Schema::create($tableName, function($table){
-                $table->increments('id');
-                $table->string('name', 50);
-                $table->float('min_value');
-                $table->float('max_value');
-                $table->string('output_type');
-            });
+//            Artisan::call('make:model', ['name'=>$sensorType]);
+//
+//            $controllerName = ($sensorType.'Controller');
+//            Artisan::call('make:controller', ['name'=>$controllerName]);
+//
+//            Schema::dropIfExists($sensorType);
+//            $tableName=(strtolower($sensorType).'s');
+//            Schema::create($tableName, function($table){
+//                $table->increments('id');
+//                $table->string('name', 50);
+//                $table->float('min_value');
+//                $table->float('max_value');
+//                $table->string('output_type');
+//            });
 
         }
         $sensors = SensorType::all();

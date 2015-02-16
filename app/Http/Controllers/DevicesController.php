@@ -3,6 +3,7 @@
 use App\Device;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Artisan;
@@ -26,16 +27,16 @@ class DevicesController extends Controller {
 	}
 
 
-	public function store()
+	public function store(Requests\CreateDeviceRequest $request)
 	{
-        $input = Request::all();
+        $input = $request->all();
         $img = $input['imageName'];
         if ($img == ''){
             $input['imageName'] = 'Default.png';
         }
         $name = $input['name'];
         Device::create($input);
-        Schema::dropIfExists($name);
+//        Schema::dropIfExists($name);
         Schema::create($name, function($table){
             $table->increments('id');
             $table->string('type_id', 50);
@@ -43,7 +44,7 @@ class DevicesController extends Controller {
             $table->string('component_name', 50);
         });
 
-        return new RedirectResponse(url('/devices'));
+        return redirect('/devices');
 	}
 
 
@@ -68,12 +69,15 @@ class DevicesController extends Controller {
 
 	public function destroy($id)
 	{
-        $device = Device::findOrFail($id);
+
+        $device = Device::find($id);
+        if ($device == null){
+            return redirect('devices');
+        }
         $name = $device['name'];
         Device::destroy($id);
         Schema::dropIfExists($name);
-
-        return new RedirectResponse(url('/devices'));
+        return redirect('devices');
 	}
 
 }

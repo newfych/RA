@@ -24,5 +24,15 @@
             </div>
 
         {!! Form::close() !!}
+
+        @if($errors->any())
+            <div class="col-md-4 col-md-offset-4">
+                <ul class="alert alert-danger">
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
 @endsection
