@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTypesTable extends Migration {
+class AddSensorTypeTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,11 @@ class AddTypesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('types', function(Blueprint $table)
+		Schema::create('sensor_types', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('type', 50);
-            $table->timestamps();
+            $table->string('name');
+			$table->timestamps();
 		});
 	}
 
@@ -27,7 +27,7 @@ class AddTypesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('types');
+		Schema::drop('sensor_types');
 	}
 
 }

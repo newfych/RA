@@ -18,6 +18,7 @@ class Components extends Migration {
             $table->string('type_id', 50);
             $table->string('component_id', 50);
             $table->string('component_name', 50);
+            $table->timestamps();
 		});
 	}
 
