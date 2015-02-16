@@ -40,7 +40,8 @@ class DevicesController extends Controller {
 
 	public function show($id)
 	{
-        return view('devices/show($id)');
+        $device = Device::findOrFail($id);
+        return view ('devices/show', compact('device'));
 	}
 
 
@@ -58,7 +59,7 @@ class DevicesController extends Controller {
 
 	public function destroy($id)
 	{
-        return view('devices/delete($id)');
+        Device::destroy($id);
 	}
 
 }

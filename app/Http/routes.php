@@ -15,15 +15,17 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('delete/device/{id}',  'DeleteController@device');
+
 Route::resource('devices', 'DevicesController');
 
-Route::resource('images', 'ImagesController');
+//Route::resource('images', 'ImagesController');
+//
+//Route::resource('sensors', 'SensorsController');
+//
+//Route::resource('actuators', 'ActuatorsController');
 
-Route::resource('sensors', 'SensorsController');
-
-Route::resource('actuators', 'ActuatorsController');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+//Route::controllers([
+//	'auth' => 'Auth\AuthController',
+//	'password' => 'Auth\PasswordController',
+//]);
