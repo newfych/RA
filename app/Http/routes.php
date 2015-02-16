@@ -15,6 +15,8 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('fill/sensors', 'FillController@sensors');
+
 Route::get('delete/device/{id}',  'DeleteController@device');
 
 Route::resource('devices', 'DevicesController');

@@ -35,12 +35,12 @@ class DevicesController extends Controller {
         }
         $name = $input['name'];
         Device::create($input);
-
+        Schema::dropIfExists($name);
         Schema::create($name, function($table){
             $table->increments('id');
-            $table->integer('type_id');
-            $table->integer('component_id');
-            $table->string('component_name');
+            $table->string('type_id', 50);
+            $table->string('component_id', 50);
+            $table->string('component_name', 50);
         });
 //        Schema::table($name, function($table){
 //
