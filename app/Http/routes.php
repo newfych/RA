@@ -13,9 +13,11 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+//Route::get('home', 'HomeController@index');
 
 Route::get('fill/stypes', 'FillController@stypes');
+
+Route::get('structure/{id}',  'StructureController@index');
 
 Route::get('delete/device/{id}',  'DeleteController@device');
 

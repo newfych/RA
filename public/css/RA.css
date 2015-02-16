@@ -22,16 +22,17 @@ ul{
     display: block;
     padding: 4px;
     line-height: 1.42857143;
-    background-color: #fff;
-    border: none;
-    border-radius: 4px;
+    background-color: transparent;
+    border: 6px;
+    border-color: #000;
+    border-radius: 6px;
 }
 .thumbnail:hover{
-    background-color: #f90;
+    background-color: #ccc;
 }
 .thumbnail:focus{
-    border-color: #f0f;
+    border-color: #ccc;
 }
 .thumbnail.active {
-    border-color: #ff0;
+    border-color: #ccc;
 }
