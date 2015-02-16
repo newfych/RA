@@ -1,0 +1,33 @@
+.container-custom{
+    width: auto;
+    height: auto;
+}
+.div-custom{
+    vertical-align: middle;
+}
+.centered-text{
+    vertical-align: middle;
+}
+.table-common{
+    border-color: #f00;
+}
+.table-common td{
+    padding: 10px;
+}
+.thumbnail {
+    display: block;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+.thumbnail:hover{
+    background-color: #f90;
+}
+.thumbnail:focus{
+    border-color: #f0f;
+}
+.thumbnail.active {
+    border-color: #ff0;
+}

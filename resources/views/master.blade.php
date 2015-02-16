@@ -7,6 +7,7 @@
     <title>RA project</title>
 
     <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/RA.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,7 +18,9 @@
 </head>
 <body>
 @yield('header')
+<div class="container-content" align="center" width="90%">
 @yield('content')
+</div>
 @yield('footer')
 </body>
 </html>
