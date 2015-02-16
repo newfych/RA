@@ -15,7 +15,7 @@ class CreateDevicesTable extends Migration {
 		Schema::create('devices', function(Blueprint $table)
 		{
 			$table->increments('id');
-            $table->string('name', 50);
+            $table->string('name', 50)->unique();
             $table->string('imageName', 50);
 			$table->timestamps();
 		});
