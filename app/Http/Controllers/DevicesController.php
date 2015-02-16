@@ -34,18 +34,20 @@ class DevicesController extends Controller {
             $input['imageName'] = 'Default.png';
         }
         $name = $input['name'];
-        $device = Device::create($input);
-        $id = $device['id'];
-        Artisan::call('make:migration', ['--create'=>$name,'name'=>$name]);
-        Artisan::call('migrate');
-        Schema::table($name, function($table){
+        Device::create($input);
 
+        Schema::create($name, function($table){
+            $table->increments('id');
             $table->integer('type_id');
             $table->integer('component_id');
-            $table->dropTimestamps();
+            $table->string('component_name');
         });
+//        Schema::table($name, function($table){
+//
+//
+//            $table->dropTimestamps();
+//        });
 
-        Artisan::call('migrate');
         return new RedirectResponse(url('/devices'));
 	}
 
