@@ -5,7 +5,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Schema;
 use Request;
 
 class DevicesController extends Controller {
@@ -31,9 +33,19 @@ class DevicesController extends Controller {
         if ($img == ''){
             $input['imageName'] = 'Default.png';
         }
+        $name = $input['name'];
+        $device = Device::create($input);
+        $id = $device['id'];
+        Artisan::call('make:migration', ['--create'=>$name,'name'=>$name]);
+        Artisan::call('migrate');
+        Schema::table($name, function($table){
 
-        Device::create($input);
-//
+            $table->integer('type_id');
+            $table->integer('component_id');
+            $table->dropTimestamps();
+        });
+
+        Artisan::call('migrate');
         return new RedirectResponse(url('/devices'));
 	}
 
@@ -59,7 +71,10 @@ class DevicesController extends Controller {
 
 	public function destroy($id)
 	{
+        $device = Device::findOrFail($id);
+        $name = $device['name'];
         Device::destroy($id);
+        Schema::dropIfExists($name);
 
         return new RedirectResponse(url('/devices'));
 	}
