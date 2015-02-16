@@ -42,11 +42,6 @@ class DevicesController extends Controller {
             $table->string('component_id', 50);
             $table->string('component_name', 50);
         });
-//        Schema::table($name, function($table){
-//
-//
-//            $table->dropTimestamps();
-//        });
 
         return new RedirectResponse(url('/devices'));
 	}

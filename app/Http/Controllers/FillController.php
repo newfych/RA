@@ -4,81 +4,53 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\SensorType;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schema;
 
 class FillController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
+
+	public function sensors()
 	{
-		//
+		$sensors = SensorType::all();
+        dd($sensors);
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
+    public function stypes()
+    {
+        $sensorTypes = ['Temperature',
+                        'Humidity',
+                        'Optical',
+                        'IR',
+                        'Input',
+                        'Audio',
+                        'Mechanical',
+                        'Position',
+                        'Magnetic',
+                        'Gas',
+                        'Other'];
+        foreach ($sensorTypes as $sensorType){
+//
+            Artisan::call('make:model', ['name'=>$sensorType]);
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
+            $controllerName = ($sensorType.'Controller');
+            Artisan::call('make:controller', ['name'=>$controllerName]);
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
+            Schema::dropIfExists($sensorType);
+            $tableName=(strtolower($sensorType).'s');
+            Schema::create($tableName, function($table){
+                $table->increments('id');
+                $table->string('name', 50);
+                $table->float('min_value');
+                $table->float('max_value');
+                $table->string('output_type');
+            });
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
+        }
+        $sensors = SensorType::all();
+        dd($sensors);
+    }
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
 
 }
