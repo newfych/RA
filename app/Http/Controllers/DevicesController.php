@@ -60,6 +60,8 @@ class DevicesController extends Controller {
 	public function destroy($id)
 	{
         Device::destroy($id);
+
+        return new RedirectResponse(url('/devices'));
 	}
 
 }

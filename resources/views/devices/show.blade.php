@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
             <a href='devices/{{$device -> id}}'>
-                <img src="/img/{{$device -> imageName}}" class="thumbnail img-responsive" height="150" width="150">
-                <h4 class="centered-text">{{$device -> name}}</h4>
+                <img src="/img/{{$device -> imageName}}" class="thumbnail img-responsive" height="200" width="200">
+                <h4>Edit configuration</h4>
             </a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
