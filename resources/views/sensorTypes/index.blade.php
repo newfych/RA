@@ -2,6 +2,7 @@
 
 @section('content')
     <h2>Sensors types</h2>
+    <br>
     <div class="row">
         @if(is_null($sensorTypes -> first()))
             <div class="col-md-4 col-md-offset-4">

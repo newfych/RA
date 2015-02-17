@@ -4,6 +4,7 @@
     <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-3">
     <h1>{{$device -> name}}</h1>
+    <br>
     </div>
         </div>
     <div class="row">
