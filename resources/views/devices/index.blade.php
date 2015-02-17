@@ -25,9 +25,9 @@
         @endif
     </div>
     <p>
-    <div class="col-md-2 col-md-offset-5">
+    <div class="col-md-2 col-md-offset-10">
         <a href='devices/create'>
-            <button type="button" class="btn btn-primary form-control">Create device</button>
+            <button type="button" class="btn btn-primary btn-lg ">Create device</button>
         </a>
     </div>
 @endsection

@@ -2,74 +2,73 @@
 
 @section('content')
     <div class="row">
-    <div class="hidden-lg hidden-md col-sm-6 col-xs-6 col-sm-offset-3 col-xs-offset-3">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-3">
     <h1>{{$device -> name}}</h1>
     </div>
         </div>
     <div class="row">
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6 col-lg-offset-1 col-md-offset-1">
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6 ">
             {{--<a href='devices/{{$device -> id}}'>--}}
-                <img src="/img/{{$device -> imageName}}" class="img img-responsive" height="150" width="150">
-                {{--<h4></h4>--}}
+                <img src="/img/{{$device -> imageName}}" class="thumb-img img-responsive" height="150" width="150">
             </a>
         </div>
-        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-            <p></p>
-            <h1></h1>
-            <h1 class="centered-text">{{$device -> name}}</h1>
+        {{--<div class="col-lg-3 col-md-3 hidden-sm hidden-xs">--}}
+            {{--<p></p>--}}
+            {{--<h1></h1>--}}
+            {{--<h1 class="centered-text">{{$device -> name}}</h1>--}}
                 {{--<h4>Created at: {{Carbon::parse($device -> created_at)->toFormattedDateString()}}</h4>--}}
                 {{--<h4>Updated at: {{Carbon::parse($device -> updated_at)->toFormattedDateString()}}</h4>--}}
 
-        </div>
+        {{--</div>--}}
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
             <a href='devices/{{$device -> id}}'>
                 <img src="/img/icons/Control.png" class="thumbnail img-responsive" height="150" width="150">
-                <h4>Controls</h4>
             </a>
+            <h4>Controls</h4>
         </div>
 
 
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
             <a href='/delete/device/{{$device -> id}}'>
                 <img src="/img/icons/Diagram.png" class="thumbnail img-responsive" height="150" width="150">
-                <h4>Diagram</h4>
             </a>
+            <h4>Diagram</h4>
         </div>
 
 
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
             <a href='/structure/{{$device -> id}}'>
                 <img src="/img/icons/Component.png" class="thumbnail img-responsive" height="150" width="150">
-                <h4>Components</h4>
             </a>
+            <h4>Components</h4>
         </div>
 
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
                 <a href='/delete/device/{{$device -> id}}'>
                 <img src="/img/icons/Logic.png" class="thumbnail img-responsive" height="150" width="150">
-                <h4>Logic</h4>
             </a>
+            <h4>Logic</h4>
         </div>
 
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
             <a href='/delete/device/{{$device -> id}}'>
                 <img src="/img/icons/Image.png" class="thumbnail img-responsive" height="150" width="150">
-                <h4>Change image</h4>
             </a>
+            <h4>Change image</h4>
         </div>
 
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
             <a href='/delete/device/{{$device -> id}}'>
                 <img src="/img/icons/Name.png" class="thumbnail img-responsive" height="150" width="150">
-                <h4>Edit name</h4>
             </a>
+            <h4>Edit name</h4>
         </div>
 
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
             <a href='/delete/device/{{$device -> id}}'>
                 <img src="/img/icons/Delete.png" class="thumbnail img-responsive" height="150" width="150">
-                <h4>Delete device</h4>
             </a>
+            <h4>Delete device</h4>
         </div>
 
     </div>
@@ -79,5 +78,4 @@
             <button type="button" class="btn btn-primary form-control">Device list</button>
         </a>
     </div>
-    </p>
 @endsection

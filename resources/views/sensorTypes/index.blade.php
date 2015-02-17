@@ -26,4 +26,8 @@
             @endforeach
         @endif
     </div>
+    <p>
+        <p class="col-lg-2 col-md-3 col-sm-4 col-xs-12 col-lg-offset-10 col-md-offset-9 col-sm-offset-8">
+            <INPUT TYPE="Button" VALUE="Previous Page" onClick="history.go(-1)" class="btn btn-primary form-control">
+        </p>
 @endsection

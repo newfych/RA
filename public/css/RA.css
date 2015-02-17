@@ -12,27 +12,65 @@ ul{
 .centered-text{
     vertical-align: middle;
 }
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 5px 0 10px;
+    border-bottom: 2px solid #eee;
+}
 .table-common{
     border-color: #f00;
 }
 .table-common td{
     padding: 10px;
 }
+
+.thumb-img {
+    display: block;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #ddd;
+    border: 2px solid #200;
+    border-radius: 6px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
 .thumbnail {
     display: block;
     padding: 4px;
     line-height: 1.42857143;
-    background-color: transparent;
-    border: 6px;
-    border-color: #000;
+    background-color: #ddd;
+    border: 2px solid #200;
     border-radius: 6px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
 }
 .thumbnail:hover{
     background-color: #ccc;
+    border-color: #500;
 }
 .thumbnail:focus{
     border-color: #ccc;
 }
 .thumbnail.active {
     border-color: #ccc;
+}
+
+.foot {
+    color: #999; /* IE8 proofing */
+    color: rgba(255,255,255,1);
+}
+
+
+/*
+ * Affix and center
+ */
+
+
+.foot {
+    position: fixed;
+    bottom: 0;
 }

@@ -1,8 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div>
-<h2>{{$device -> name}}</h2></div>
+    <div><h2>{{$device -> name}}</h2></div>
 {{--<div class="row">--}}
     {{--@if(is_null($devices -> first()))--}}
     {{--<div class="col-md-4 col-md-offset-4">--}}
@@ -26,22 +25,21 @@
     {{--@endif--}}
 {{--</div>--}}
 
-<div class="row">
-    <div class="col-md-3 col-md-offset-7">
-        <a href='/sensors'>
-            <button type="button" class="btn btn-primary form-control">Add sensor</button>
-        </a>
-    </div>
-</div>
+        <p class="col-lg-3 col-md-3 col-sm-4 col-xs-12 col-lg-offset-9 col-md-offset-9 col-sm-offset-8">
+            <a href='/sensors'>
+                <button type="button" class="btn btn-primary form-control">Add sensor</button>
+            </a>
+        </p>
     {{--<br>--}}
     <p>
-<div class="row">
-    <div class="col-md-3 col-md-offset-7">
-        <a href='/'>
-            <button type="button" class="btn btn-primary form-control">Add actuator</button>
-        </a>
-    </div>
-</div>
-
+        <p class="col-lg-3 col-md-3 col-sm-4 col-xs-12 col-lg-offset-9 col-md-offset-9 col-sm-offset-8">
+            <a href='/'>
+                <button type="button" class="btn btn-primary form-control">Add actuator</button>
+            </a>
+        </p>
+    <p>
+    <p class="col-lg-2 col-md-3 col-sm-4 col-xs-12 col-lg-offset-10 col-md-offset-9 col-sm-offset-8">
+        <INPUT TYPE="Button" VALUE="Previous Page" onClick="history.go(-1)" class="btn btn-primary form-control">
+    </p>
 
 @endsection
