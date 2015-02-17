@@ -38,24 +38,25 @@
                     <h3></h3>
                 @endif
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs">
+            <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs">
                 @if(Auth::user() !=null)
                     <h3 >Hallo, {{Auth::user()->name}}! </h3>
                 @else
                     <h3 >Hallo, guest! </h3>
                 @endif
             </div>
-            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-12">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                 <a href="/auth/logout" class="disabled">
                     <h3>Logout</h3>
                 </a>
             </div>
         </div>
     </div>
+
 @yield('content')
 
 
-@yield('footer')
+@yield('scripts')
 
     <div class="foot">
             <p>&copy Rusinov Alexandr 2015</p>

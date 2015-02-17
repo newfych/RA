@@ -10,5 +10,11 @@
                 </a>
             </div>
         </div>
+        <br><br><br><br>
+        <div class="col-md-2 col-md-offset-5">
+            <a href='/diagram/basic'>
+                <button type="button" class="btn btn-success btn-lg ">Diagram</button>
+            </a>
+        </div>
     </div>
 @endsection
