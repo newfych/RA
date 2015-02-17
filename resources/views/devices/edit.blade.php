@@ -4,4 +4,4 @@
 
     <h1>Devices/edit</h1>
 
-@endsection
+@stop

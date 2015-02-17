@@ -4,4 +4,4 @@
 
     <h1>Devices/delete</h1>
 
-@endsection
+@stop

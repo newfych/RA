@@ -10,4 +10,4 @@
     {!! Form::open(['method'=>'delete','action'=>['DevicesController@destroy',$device->id]]) !!}
         <button type="submit" class="btn btn-danger ">Delete</button>
     {!! Form::close() !!}
-@endsection
+@stop

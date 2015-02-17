@@ -43,4 +43,4 @@
         <INPUT TYPE="Button" VALUE="Previous page" onClick="history.go(-1)" class="btn btn-primary form-control">
     </p>
 
-@endsection
+@stop

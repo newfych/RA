@@ -19,6 +19,7 @@ Route::get('fill/stypes', 'FillController@stypes');
 
 Route::get('structure/{id}',  'StructureController@index');
 
+
 Route::get('diagram/basic',  'DiagramController@basic');
 
 Route::get('delete/device/{id}',  'DeleteController@device');

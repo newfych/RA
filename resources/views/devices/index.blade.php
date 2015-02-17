@@ -5,15 +5,15 @@
     <br>
     <div class="row">
         @if(is_null($devices -> first()))
-                <div class="col-md-4 col-md-offset-4">
-                    <h4>No devices</h4>
-                </div>
+            <div class="col-md-4 col-md-offset-4">
+                <h4>No devices</h4>
+            </div>
 
-                <div class="col-md-4 col-md-offset-4">
-                    <a href='devices/create'>
-                        <button class="btn btn-primary ">Create new device</button>
-                    </a>
-                </div>
+            <div class="col-md-4 col-md-offset-4">
+                <a href='devices/create'>
+                    <button class="btn btn-primary ">Create new device</button>
+                </a>
+            </div>
         @else
             @foreach($devices as $device)
                 <div class="div-custom col-lg-2 col-md-3 col-sm-4 col-xs-6">
@@ -31,4 +31,4 @@
             <button type="button" class="btn btn-primary btn-lg ">Create device</button>
         </a>
     </div>
-@endsection
+@stop

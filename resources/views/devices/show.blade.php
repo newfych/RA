@@ -79,4 +79,4 @@
             <button type="button" class="btn btn-primary form-control">Device list</button>
         </a>
     </div>
-@endsection
+@stop

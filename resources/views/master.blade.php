@@ -18,11 +18,10 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="http://http://d3js.org/d3.v3.min.js"></script>
+    <script src="/js/d3.v3.min.js"></script>
 
 </head>
 <body>
-@yield('header')
 <div class="container-content" align="center" width="90%">
     <div class="page-header">
         <div class="row">
@@ -46,17 +45,17 @@
                 @endif
             </div>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                <a href="/auth/logout" class="disabled">
+                {{--<a href="/auth/logout" class="disabled">--}}
+                <a href="../" class="disabled">
                     <h3>Logout</h3>
                 </a>
             </div>
         </div>
     </div>
 
-@yield('content')
+    @yield('content')
 
-
-@yield('scripts')
+    @yield('scripts')
 
     <div class="foot">
             <p>&copy Rusinov Alexandr 2015</p>
